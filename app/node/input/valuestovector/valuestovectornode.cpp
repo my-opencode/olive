@@ -19,6 +19,7 @@
 ***/
 
 #include "valuestovectornode.h"
+#include <QDebug>
 
 namespace olive {
 
@@ -57,10 +58,19 @@ void ValuesToVectorNode::Retranslate() {
 
 void ValuesToVectorNode::Value(const NodeValueRow &value, const NodeGlobals &globals, NodeValueTable *table) const {
   Q_UNUSED(globals)
+  qDebug() << "ValuesToVectorNode::Value called";
+  qDebug() << "X is " << QString::number(value[kParamXIn].toDouble(), 'f', 3) << " and Y is " << QString::number(value[kParamYIn].toDouble(), 'f', 3);
   // Push value onto the table
   table->Push(NodeValue::kVec2, 
               QVector2D(value[kParamXIn].toDouble(), value[kParamYIn].toDouble()), 
               this);
+}
+
+void ValuesToVectorNode::InputValueChangedEvent(const QString &input, int element)
+{
+  qDebug() << "ValuesToVectorNode::InputValueChangedEvent called with input = " << input << " and element = " << QString::number(element);
+
+  super::InputValueChangedEvent(input, element);
 }
 
 }  // namespace olive
