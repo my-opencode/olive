@@ -49,6 +49,9 @@ cmake .. -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo
 cmake --build .
 ```
 
+- One liner
+  `rm -rf build && mkdir build && cd build && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo && cmake --build .`
+
 #### c. Prepare for AppImage
 
 - Using the root (#) shell inside the container.
