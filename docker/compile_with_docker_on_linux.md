@@ -31,7 +31,7 @@ docker pull olivevideoeditor/ci-olive:latest
 
 ```shell
 # You will need root privileges. Use 'sudo' on Ubuntu/Debian.
-docker run --rm -it -v /path/to/your/local/copy/of/olive:/opt/olive olivevideoeditor/ci-olive:latest
+docker run --rm -it -v /path/to/your/local/copy/of/olive:/opt/olive olivevideoeditor/ci-olive:2022.4
 ```
 
 #### b. Prepare the build directory
