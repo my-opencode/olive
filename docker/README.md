@@ -3,6 +3,11 @@
 Olive uses Docker containers for continuous integration on Linux.
 No Docker images are involved for the Windows and macOS CI.
 
+## Compiling on Linux with Docker
+
+Compiling instructions for Linux using docker can be found [on the main site](https://olivevideoeditor.org/compile#docker).
+Local copy in [](./compile_with_docker_on_linux.md).
+
 ## Overview
 
 `ci-common` is the shared build image with GCC, Clang and packages that are
