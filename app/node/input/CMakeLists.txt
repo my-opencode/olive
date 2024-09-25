@@ -17,6 +17,7 @@
 add_subdirectory(multicam)
 add_subdirectory(time)
 add_subdirectory(value)
+add_subdirectory(valuestovector)
 
 set(OLIVE_SOURCES
   ${OLIVE_SOURCES}
