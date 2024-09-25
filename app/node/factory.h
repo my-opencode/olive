@@ -59,6 +59,7 @@ public:
     kProjectFolder,
     kProjectSequence,
     kValueNode,
+    kValuesToVectorNode,
     kTimeRemapNode,
     kSubtitleBlock,
     kShapeGenerator,

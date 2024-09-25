@@ -56,6 +56,7 @@
 #include "input/multicam/multicamnode.h"
 #include "input/time/timeinput.h"
 #include "input/value/valuenode.h"
+#include "input/valuestovector/valuestovectornode.h"
 #include "keying/chromakey/chromakey.h"
 #include "keying/colordifferencekey/colordifferencekey.h"
 #include "keying/despill/despill.h"
@@ -265,6 +266,8 @@ Node *NodeFactory::CreateFromFactoryIndex(const NodeFactory::InternalID &id)
     return new Sequence();
   case kValueNode:
     return new ValueNode();
+  case kValuesToVectorNode:
+    return new ValuesToVectorNode();
   case kTimeRemapNode:
     return new TimeRemapNode();
   case kSubtitleBlock:
