@@ -125,7 +125,13 @@ NodeParamViewItemBody::NodeParamViewItemBody(Node* node, NodeParamViewCheckBoxBe
 {
   QGridLayout* root_layout = new QGridLayout(this);
 
-  int insert_row = 0;
+  // Display the node description before inputs
+  QLabel* description_label = new QLabel(this);
+  description_label->setText(node->Description());
+  root_layout->addWidget(description_label, 0, 1, 1, 10);
+
+  // changed value from 0 to 1 to accomadate the description row
+  int insert_row = 1;
 
   QVector<Node*> connected_signals;
 
