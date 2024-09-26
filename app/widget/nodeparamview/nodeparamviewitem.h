@@ -121,6 +121,8 @@ private:
 
   QHash<NodeInputPair, NodeInputPair> input_group_lookup_;
 
+  QLabel* description_label;
+
   /**
    * @brief The column to place the keyframe controls in
    *
