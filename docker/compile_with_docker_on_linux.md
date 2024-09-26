@@ -23,6 +23,9 @@ docker pull olivevideoeditor/ci-olive:latest
 
 ### 3. Build Olive inside a container
 
+- One liner
+  `rm -rf build && mkdir build && cd build && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo && cmake --build . && cmake --install app --prefix appdir/usr && /usr/local/linuxdeployqt-x86_64.AppImage appdir/usr/share/applications/org.olivevideoeditor.Olive.desktop -appimage --appimage-extract-and-run`
+
 #### a. Run the container
 
 - Run [ci-olive](https://hub.docker.com/r/olivevideoeditor/ci-olive) as a container.
@@ -48,9 +51,6 @@ cmake .. -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo
 # cmake .. -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_COMPILER=clang++
 cmake --build .
 ```
-
-- One liner
-  `rm -rf build && mkdir build && cd build && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo && cmake --build .`
 
 #### c. Prepare for AppImage
 
