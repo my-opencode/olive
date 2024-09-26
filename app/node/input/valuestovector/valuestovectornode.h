@@ -60,8 +60,6 @@ public:
 
   virtual void Value(const NodeValueRow& value, const NodeGlobals &globals, NodeValueTable *table) const override;
 
-protected:
-  virtual void InputValueChangedEvent(const QString &input, int element) override;
 };
 
 }
