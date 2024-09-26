@@ -32,7 +32,7 @@ b. Values conventions:
 > Import the new node node to the factory.
 
 ```diff
-+ #include "input/value/<nodename>node.h"
++ #include "<category>/<nodename>/<nodename>node.h"
 ```
 
 ```diff
